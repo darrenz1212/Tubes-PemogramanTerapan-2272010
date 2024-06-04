@@ -5,7 +5,7 @@ from datetime import datetime
 Base = declarative_base()
 
 class User(Base):
-    __tablename__ = 'users'
+    __tablename__ = 'user'
     
     user_id = Column(Integer, primary_key=True, autoincrement=True)
     username = Column(String(255), nullable=False)
@@ -86,7 +86,7 @@ class PengajuanBeasiswa(Base):
     beasiswa_id = Column(Integer, ForeignKey('jenis_beasiswa.beasiswa_id'), nullable=True)
     periode_id = Column(Integer, nullable=True)
     tanggal_pengajuan = Column(DateTime, nullable=False)
-    status_pengajuan = Column(Enum('diajukan','disetujui_prodi','disetujui_fakultas','ditolak_prodi','ditolak_fakultas'), nullable=False)
+    status_pengajuan = Column(Enum('Diajukan','Disetujui Prodi','Tidak Disetujui Prodi'), nullable=False)
     status_pengajuan_fakultas = Column(Enum('Diajukan','Disetujui Fakultas','Tidak Disetujui Fakultas'), nullable=False)
     dokumen_pengajuan = Column(String(255), nullable=False)
 
