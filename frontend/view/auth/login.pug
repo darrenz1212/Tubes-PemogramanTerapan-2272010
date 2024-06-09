@@ -23,14 +23,14 @@ html(lang="en")
         .card-body
           p.login-box-msg Sign in to start your session
 
-          form(method='POST', action='/login')
+          form(id='loginForm', method='POST', action='/login')
             .input-group.mb-3
-              input(type="text" id="email" class="form-control" placeholder="Username")
+              input(type="text" name="username" id="username" class="form-control" placeholder="Username")
               .input-group-append
                 .input-group-text
                   span.fas.fa-envelope
             .input-group.mb-3
-              input(type="password" id="password" class="form-control" placeholder="Password")
+              input(type="password" name="password" id="password" class="form-control" placeholder="Password")
               .input-group-append
                 .input-group-text
                   span.fas.fa-lock
@@ -40,7 +40,7 @@ html(lang="en")
                   input(type="checkbox" id="remember")
                   label(for="remember") Remember Me
               .col-4
-                button(type="button" id="loginButton" class="btn btn-primary btn-block") Log In
+                button(type="submit" id="loginButton" class="btn btn-primary btn-block") Log In
           p.mb-1
             a(href="forgot-password.html") I forgot my password
           p.mb-0

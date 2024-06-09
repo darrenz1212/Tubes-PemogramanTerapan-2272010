@@ -1,0 +1,11 @@
+.btn-approve {
+    padding: 3px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.btn-decline {
+    padding: 3px 10px;
+    font-size: 12px;
+    margin-left: 5px;
+}
