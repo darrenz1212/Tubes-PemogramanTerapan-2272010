@@ -1,0 +1,56 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title AdminLTE 3 | Log in (v2)
+
+    // Google Font: Source Sans Pro
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback")
+    // Font Awesome
+    link(rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css")
+    // icheck bootstrap
+    link(rel="stylesheet" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css")
+    // Theme style
+    link(rel="stylesheet" href="/dist/css/adminlte.min.css")
+
+  body.hold-transition.login-page
+    .login-box
+      .card.card-outline.card-primary
+        .card-header.text-center
+          a(href="/" class="h1")
+            b Beasiswa-app 
+        .card-body
+          p.login-box-msg Sign in to start your session
+
+          form(method='POST', action='/login')
+            .input-group.mb-3
+              input(type="text" id="email" class="form-control" placeholder="Username")
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-envelope
+            .input-group.mb-3
+              input(type="password" id="password" class="form-control" placeholder="Password")
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-lock
+            .row
+              .col-8
+                .icheck-primary
+                  input(type="checkbox" id="remember")
+                  label(for="remember") Remember Me
+              .col-4
+                button(type="button" id="loginButton" class="btn btn-primary btn-block") Log In
+          p.mb-1
+            a(href="forgot-password.html") I forgot my password
+          p.mb-0
+            a(href="register.html" class="text-center") Register a new membership
+
+    // jQuery
+    script(src="/plugins/jquery/jquery.min.js")
+    // Bootstrap 4
+    script(src="/plugins/bootstrap/js/bootstrap.bundle.min.js")
+    // AdminLTE App
+    script(src="/dist/js/adminlte.min.js")
+    // Load custom script
+    script(src="/js/auth/login.js")
