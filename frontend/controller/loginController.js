@@ -22,6 +22,8 @@ const login = (req, res) => {
             };
             if (data.role === "program_studi"){
                 res.redirect('/prodi'); // Replace with the desired route after login
+            } else if(data.role === "mahasiswa"){
+                res.redirect('/mahasiswa'); // Replace with the desired route after login
             }
         } else {
             res.render('auth/login', { error: 'Login failed. Please try again.' });

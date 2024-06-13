@@ -35,11 +35,11 @@ block sidebar-content
               a.nav-link(href="/prodi")
                 p Home
             li.nav-item
-              a.nav-link(href="/prodi/show-beasiswa")
+              a.nav-link.active(href="/prodi/show-beasiswa")
                 p List Beasiswa
             li.nav-item
-              a.nav-link(href="")
-                p List User
+              a.nav-link(href="/prodi/show-mahasiswa")
+                p List Mahasiswa
 
 block web-content   
     //- Content Header (Page header)
@@ -92,3 +92,5 @@ block web-content
 block extra-js 
     script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11")
     script(src="/js/prodi/declineBeasiswa.js")
+    script(src="/js/prodi/approveBeasiswa.js")
+

@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const pengajuanId = this.getAttribute('data-id');
 
-            // Tambahkan konfirmasi dengan SweetAlert
             Swal.fire({
                 title: 'Anda yakin?',
                 text: "Anda akan menyetujui pengajuan ini!",
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 confirmButtonText: 'Ya, setujui!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`/prodi/show-beasiswa`, {
+                    fetch(`/prodi/approve-beasiswa`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'

@@ -19,7 +19,8 @@ html(lang="en")
       .card.card-outline.card-primary
         .card-header.text-center
           a(href="/" class="h1")
-            b Beasiswa-app 
+            b Beasiswa 
+            | app 
         .card-body
           p.login-box-msg Sign in to start your session
 
@@ -41,10 +42,7 @@ html(lang="en")
                   label(for="remember") Remember Me
               .col-4
                 button(type="submit" id="loginButton" class="btn btn-primary btn-block") Log In
-          p.mb-1
-            a(href="forgot-password.html") I forgot my password
-          p.mb-0
-            a(href="register.html" class="text-center") Register a new membership
+            a(href="/register" class="text-center") Register 
 
     // jQuery
     script(src="/plugins/jquery/jquery.min.js")

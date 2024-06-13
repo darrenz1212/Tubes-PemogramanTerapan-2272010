@@ -14,7 +14,7 @@ from dbConfig import DATABASE_URL
 app = Flask(__name__)
 CORS(app, supports_credentials=True) 
 app.secret_key = 'your_secret_key'
-app.config['UPLOAD_FOLDER'] = 'dokumenPengajuan'
+app.config['UPLOAD_FOLDER'] = 'uploads'
 
 # Initialize SQLAlchemy
 engine = create_engine(DATABASE_URL)

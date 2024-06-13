@@ -174,7 +174,8 @@ def addUser():
     session.add(new_user)
     session.commit()
     session.close()
-    return jsonify({'message': 'User added successfully'})
+    return jsonify({
+        'message': 'User added successfully'})
 
 @adminBp.route('/update-user/<userId>', methods=['PUT'])
 def updateUser(userId):

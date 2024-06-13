@@ -1,0 +1,86 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title AdminLTE 3 | Registration Page
+
+    // Google Font: Source Sans Pro
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback")
+    // Font Awesome
+    link(rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css")
+    // icheck bootstrap
+    link(rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css")
+    // Theme style
+    link(rel="stylesheet" href="../../dist/css/adminlte.min.css")
+  body(class="hold-transition register-page")
+    .register-box
+      .register-logo
+        a(href="../../index2.html") 
+          b Beasiswa 
+          | App
+
+      .card
+        .card-body.register-card-body
+          p.login-box-msg Register 
+
+          // Tambahkan blok untuk menampilkan pesan
+          if success
+            .alert.alert-success #{success}
+          if error
+            .alert.alert-danger #{error}
+
+          form(action="/register" method="post")
+            .input-group.mb-3
+              input.form-control(type="text" name="username" placeholder="Username" required)
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-user
+
+            .input-group.mb-3
+              input.form-control(type="password" name="password" placeholder="Password" required)
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-lock
+
+            .input-group.mb-3
+              select.form-control(name="role" required)
+                option(value="program_studi") Program Studi
+                option(value="mahasiswa") Mahasiswa
+                option(value="fakultas") Fakultas
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-user-graduate
+
+            .input-group.mb-3
+              select.form-control(name="programStudiId" required)
+                option(value="1") Teknik Infomatika
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-school
+
+            .input-group.mb-3
+              select.form-control(name="fakultasId" required)
+                option(value="1") Informasi Teknologi
+              .input-group-append
+                .input-group-text
+                  span.fas.fa-university
+
+            .row
+              .col-8
+                .icheck-primary
+                  input(type="checkbox" id="agreeTerms" name="terms" value="agree" required)
+                  label(for="agreeTerms")
+                    | I agree to the 
+                    a(href="#") terms
+              .col-4
+                button.btn.btn-primary.btn-block(type="submit") Register
+
+          a(href="/" class="text-center") I already have an account
+
+    // jQuery
+    script(src="../../plugins/jquery/jquery.min.js")
+    // Bootstrap 4
+    script(src="../../plugins/bootstrap/js/bootstrap.bundle.min.js")
+    // AdminLTE App
+    script(src="../../dist/js/adminlte.min.js")
